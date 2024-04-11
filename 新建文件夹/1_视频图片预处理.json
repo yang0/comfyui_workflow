@@ -1,0 +1,3950 @@
+{
+  "last_node_id": 179,
+  "last_link_id": 230,
+  "nodes": [
+    {
+      "id": 79,
+      "type": "BRIA_RMBG_ModelLoader_Zho",
+      "pos": [
+        5218.6682495117175,
+        -416.26670074462913
+      ],
+      "size": {
+        "0": 264.1767578125,
+        "1": 26
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "outputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "links": [
+            129
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BRIA_RMBG_ModelLoader_Zho"
+      }
+    },
+    {
+      "id": 84,
+      "type": "ScribblePreprocessor",
+      "pos": [
+        5422.457379197082,
+        877.3264576349479
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 51,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 153
+        },
+        {
+          "name": "resolution",
+          "type": "INT",
+          "link": 201,
+          "widget": {
+            "name": "resolution"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            154
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ScribblePreprocessor"
+      },
+      "widgets_values": [
+        512
+      ]
+    },
+    {
+      "id": 93,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        7436.787794459467,
+        489.41282316833434
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 78,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 144
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 192,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "dance/dance2/mask/m",
+        "format": "video/16bit-png",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "m_00001.%03d.png",
+            "subfolder": "dance\\dance2\\mask",
+            "type": "output",
+            "format": "video/16bit-png"
+          }
+        }
+      }
+    },
+    {
+      "id": 98,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        7917.234927526605,
+        886.0307731853622
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 71,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 207
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 161,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "dance/dance2/depth/d",
+        "format": "video/16bit-png",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "d_00001.%03d.png",
+            "subfolder": "dance\\dance2\\depth",
+            "type": "output",
+            "format": "video/16bit-png"
+          }
+        }
+      }
+    },
+    {
+      "id": 111,
+      "type": "GetNode",
+      "pos": [
+        7709.234927526605,
+        1038.0307731853622
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            161
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_depth_prefix",
+      "properties": {},
+      "widgets_values": [
+        "depth_prefix"
+      ]
+    },
+    {
+      "id": 121,
+      "type": "GetNode",
+      "pos": [
+        5146.0006103515625,
+        -769.6670684814453
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            171
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top_folder",
+      "properties": {},
+      "widgets_values": [
+        "top_folder"
+      ]
+    },
+    {
+      "id": 122,
+      "type": "GetNode",
+      "pos": [
+        5136.0006103515625,
+        -719.6670684814453
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            172
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_project_folder",
+      "properties": {},
+      "widgets_values": [
+        "project_folder"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "Simple String",
+      "pos": [
+        5176.0006103515625,
+        -929.6670684814453
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            164
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "总目录",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "dance/"
+      ]
+    },
+    {
+      "id": 126,
+      "type": "ConcatStringSingle",
+      "pos": [
+        6289,
+        -1168
+      ],
+      "size": {
+        "0": 256.6666259765625,
+        "1": 57.3333740234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 177,
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 175,
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            178
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 117,
+      "type": "Simple String",
+      "pos": [
+        5910,
+        -1169
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            175
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "depth目录及后缀",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "/depth/d"
+      ]
+    },
+    {
+      "id": 123,
+      "type": "SetNode",
+      "pos": [
+        6546,
+        -1171
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 178
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "Set_depth_prefix",
+      "properties": {
+        "previousName": "depth_prefix"
+      },
+      "widgets_values": [
+        "depth_prefix"
+      ]
+    },
+    {
+      "id": 125,
+      "type": "ConcatStringSingle",
+      "pos": [
+        5331,
+        -742
+      ],
+      "size": {
+        "0": 243.60000610351562,
+        "1": 65.8927001953125
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 171,
+          "widget": {
+            "name": "string_a"
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 172,
+          "widget": {
+            "name": "string_b"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            176
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 127,
+      "type": "SetNode",
+      "pos": [
+        5593,
+        -742
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 176
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_top+project_folder",
+      "properties": {
+        "previousName": "top+project_folder"
+      },
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 119,
+      "type": "SetNode",
+      "pos": [
+        5513,
+        -899
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 164
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_top_folder",
+      "properties": {
+        "previousName": "top_folder"
+      },
+      "widgets_values": [
+        "top_folder"
+      ]
+    },
+    {
+      "id": 118,
+      "type": "SetNode",
+      "pos": [
+        5533,
+        -1159
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_project_folder",
+      "properties": {
+        "previousName": "project_folder"
+      },
+      "widgets_values": [
+        "project_folder"
+      ]
+    },
+    {
+      "id": 128,
+      "type": "GetNode",
+      "pos": [
+        5936,
+        -1222
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            177
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top+project_folder",
+      "properties": {},
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 131,
+      "type": "ConcatStringSingle",
+      "pos": [
+        6280,
+        -980
+      ],
+      "size": {
+        "0": 256.6666259765625,
+        "1": 57.3333740234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 180,
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 181,
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            179
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 132,
+      "type": "GetNode",
+      "pos": [
+        5920,
+        -1030
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            180
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top+project_folder",
+      "properties": {},
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 129,
+      "type": "Simple String",
+      "pos": [
+        5900,
+        -980
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "depth目录及后缀",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "/pose/p"
+      ]
+    },
+    {
+      "id": 130,
+      "type": "SetNode",
+      "pos": [
+        6530,
+        -980
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "Set_pose_prefix",
+      "properties": {
+        "previousName": "pose_prefix"
+      },
+      "widgets_values": [
+        "pose_prefix"
+      ]
+    },
+    {
+      "id": 134,
+      "type": "SetNode",
+      "pos": [
+        6550,
+        -780
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 182
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "Set_rmbg_prefix",
+      "properties": {
+        "previousName": "rmbg_prefix"
+      },
+      "widgets_values": [
+        "rmbg_prefix"
+      ]
+    },
+    {
+      "id": 136,
+      "type": "GetNode",
+      "pos": [
+        5935,
+        -845
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            183
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top+project_folder",
+      "properties": {},
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 135,
+      "type": "ConcatStringSingle",
+      "pos": [
+        6290,
+        -770
+      ],
+      "size": {
+        "0": 256.6666259765625,
+        "1": 57.3333740234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 183,
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 184,
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            182
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 133,
+      "type": "Simple String",
+      "pos": [
+        5910,
+        -770
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            184
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "depth目录及后缀",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "/rmbg/r"
+      ]
+    },
+    {
+      "id": 139,
+      "type": "ConcatStringSingle",
+      "pos": [
+        7230,
+        -1150
+      ],
+      "size": {
+        "0": 256.6666259765625,
+        "1": 57.3333740234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 186,
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 187,
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            185
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 140,
+      "type": "GetNode",
+      "pos": [
+        6880,
+        -1210
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            186
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top+project_folder",
+      "properties": {},
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 137,
+      "type": "Simple String",
+      "pos": [
+        6850,
+        -1160
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            187
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "depth目录及后缀",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "/mask/m"
+      ]
+    },
+    {
+      "id": 143,
+      "type": "ConcatStringSingle",
+      "pos": [
+        7210,
+        -980
+      ],
+      "size": {
+        "0": 256.6666259765625,
+        "1": 57.3333740234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 189,
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 190,
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            188
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 144,
+      "type": "GetNode",
+      "pos": [
+        6850,
+        -1030
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            189
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top+project_folder",
+      "properties": {},
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 141,
+      "type": "Simple String",
+      "pos": [
+        6830,
+        -980
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            190
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "depth目录及后缀",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "/scribble/s"
+      ]
+    },
+    {
+      "id": 142,
+      "type": "SetNode",
+      "pos": [
+        7460,
+        -980
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 188
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "Set_scribble_prefix",
+      "properties": {
+        "previousName": "scribble_prefix"
+      },
+      "widgets_values": [
+        "scribble_prefix"
+      ]
+    },
+    {
+      "id": 138,
+      "type": "SetNode",
+      "pos": [
+        7494,
+        -1149
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 185
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "Set_mask_prefix",
+      "properties": {
+        "previousName": "mask_prefix"
+      },
+      "widgets_values": [
+        "mask_prefix"
+      ]
+    },
+    {
+      "id": 96,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        6920.751576562498,
+        890.8923096310408
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 68,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 147
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 191,
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "dance/dance2/pose/p",
+        "format": "video/16bit-png",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "p_00001.%03d.png",
+            "subfolder": "dance\\dance2\\pose",
+            "type": "output",
+            "format": "video/16bit-png"
+          }
+        }
+      }
+    },
+    {
+      "id": 145,
+      "type": "GetNode",
+      "pos": [
+        6746.7515765624985,
+        978.8923096310415
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            191
+          ]
+        }
+      ],
+      "title": "Get_pose_prefix",
+      "properties": {},
+      "widgets_values": [
+        "pose_prefix"
+      ]
+    },
+    {
+      "id": 146,
+      "type": "GetNode",
+      "pos": [
+        7234.787794459467,
+        579.412823168335
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            192
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_mask_prefix",
+      "properties": {},
+      "widgets_values": [
+        "mask_prefix"
+      ]
+    },
+    {
+      "id": 92,
+      "type": "MaskToImage",
+      "pos": [
+        7211.787794459467,
+        488.41282316833434
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 69,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            144
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToImage"
+      }
+    },
+    {
+      "id": 91,
+      "type": "GrowMaskWithBlur",
+      "pos": [
+        6873.787794459467,
+        479.4128231683343
+      ],
+      "size": {
+        "0": 315,
+        "1": 222
+      },
+      "flags": {},
+      "order": 50,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 156,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            142
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "mask_inverted",
+          "type": "MASK",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GrowMaskWithBlur"
+      },
+      "widgets_values": [
+        10,
+        0,
+        true,
+        false,
+        8.9,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 104,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        5770.457379197082,
+        883.3264576349479
+      ],
+      "size": {
+        "0": 315,
+        "1": 238
+      },
+      "flags": {},
+      "order": 70,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 154
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 194,
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "dance/dance2/scribble/s",
+        "format": "video/16bit-png",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      }
+    },
+    {
+      "id": 148,
+      "type": "GetNode",
+      "pos": [
+        5496.457379197082,
+        996.6598316583855
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 4,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            194
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_scribble_prefix",
+      "properties": {},
+      "widgets_values": [
+        "scribble_prefix"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "DWPreprocessor",
+      "pos": [
+        6423.751576562498,
+        888.8923096310408
+      ],
+      "size": {
+        "0": 315,
+        "1": 198
+      },
+      "flags": {},
+      "order": 49,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 146
+        },
+        {
+          "name": "resolution",
+          "type": "INT",
+          "link": 197,
+          "widget": {
+            "name": "resolution"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            147
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "POSE_KEYPOINT",
+          "type": "POSE_KEYPOINT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DWPreprocessor"
+      },
+      "widgets_values": [
+        "enable",
+        "enable",
+        "enable",
+        512,
+        "yolox_l.onnx",
+        "dw-ll_ucoco_384_bs5.torchscript.pt"
+      ]
+    },
+    {
+      "id": 77,
+      "type": "BRIA_RMBG_Zho",
+      "pos": [
+        5538.6682495117175,
+        -386.26670074462913
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 53,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "link": 129,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 125
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            200
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BRIA_RMBG_Zho"
+      }
+    },
+    {
+      "id": 102,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        5771.6682495117175,
+        -239.26670074462888
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 72,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 200
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 193,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "dance/dance2/rmbg/r",
+        "format": "video/16bit-png",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "r_00001.%03d.png",
+            "subfolder": "dance\\dance2\\rmbg",
+            "type": "output",
+            "format": "video/16bit-png"
+          }
+        }
+      }
+    },
+    {
+      "id": 147,
+      "type": "GetNode",
+      "pos": [
+        5555.6682495117175,
+        -152.26670074462885
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 4,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            193
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_rmbg_prefix",
+      "properties": {},
+      "widgets_values": [
+        "rmbg_prefix"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "SetNode",
+      "pos": [
+        5528,
+        490.53343505859374
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_rmbg_img",
+      "properties": {
+        "previousName": "rmbg_img"
+      },
+      "widgets_values": [
+        "rmbg_img"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "SetNode",
+      "pos": [
+        5528,
+        587.5334350585938
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_mask",
+      "properties": {
+        "previousName": "mask"
+      },
+      "widgets_values": [
+        "mask"
+      ]
+    },
+    {
+      "id": 95,
+      "type": "GetNode",
+      "pos": [
+        6240,
+        914
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            146
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_rmbg_img",
+      "properties": {},
+      "widgets_values": [
+        "rmbg_img"
+      ]
+    },
+    {
+      "id": 103,
+      "type": "GetNode",
+      "pos": [
+        5183.457379197082,
+        876.3264576349479
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 4,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            153
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_rmbg_img",
+      "properties": {},
+      "widgets_values": [
+        "rmbg_img"
+      ]
+    },
+    {
+      "id": 97,
+      "type": "GetNode",
+      "pos": [
+        7409.532336425779,
+        925.0002441406247
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 21,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            148
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_rmbg_img",
+      "properties": {},
+      "widgets_values": [
+        "rmbg_img"
+      ]
+    },
+    {
+      "id": 151,
+      "type": "GetNode",
+      "pos": [
+        6262,
+        980
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            197
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_resolution",
+      "properties": {},
+      "widgets_values": [
+        "resolution"
+      ]
+    },
+    {
+      "id": 101,
+      "type": "GetNode",
+      "pos": [
+        6698.734741210935,
+        505.93341674804685
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            156
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_mask",
+      "properties": {},
+      "widgets_values": [
+        "mask"
+      ]
+    },
+    {
+      "id": 154,
+      "type": "GetNode",
+      "pos": [
+        5246,
+        1006
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 4,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            201
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_resolution",
+      "properties": {},
+      "widgets_values": [
+        "resolution"
+      ]
+    },
+    {
+      "id": 155,
+      "type": "GetNode",
+      "pos": [
+        7419.532336425779,
+        999.0002441406247
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            202
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_resolution",
+      "properties": {},
+      "widgets_values": [
+        "resolution"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        5219.667211914061,
+        -325.26667022705095
+      ],
+      "size": [
+        235.1999969482422,
+        638.5777723524305
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            125
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "dance2.mp4",
+        "force_rate": 30,
+        "force_size": "512x?",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 2,
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "force_rate": 30,
+            "filename": "dance2.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "select_every_nth": 2,
+            "force_size": "512x?"
+          }
+        }
+      }
+    },
+    {
+      "id": 105,
+      "type": "VHS_LoadImages",
+      "pos": [
+        5196,
+        490.53343505859374
+      ],
+      "size": [
+        243.60000610351562,
+        194
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            155,
+            203
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            157
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadImages"
+      },
+      "widgets_values": {
+        "directory": "rmbg",
+        "image_load_cap": 0,
+        "skip_first_images": 0,
+        "select_every_nth": 1,
+        "choose folder to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 0,
+            "skip_first_images": 0,
+            "filename": "rmbg",
+            "type": "input",
+            "format": "folder",
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 153,
+      "type": "SetNode",
+      "pos": [
+        6391,
+        677
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 79,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 198
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_resolution",
+      "properties": {
+        "previousName": "resolution"
+      },
+      "widgets_values": [
+        "resolution"
+      ]
+    },
+    {
+      "id": 152,
+      "type": "PixelPerfectResolution",
+      "pos": [
+        6155,
+        499
+      ],
+      "size": {
+        "0": 278.79998779296875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "original_image",
+          "type": "IMAGE",
+          "link": 204,
+          "slot_index": 0
+        },
+        {
+          "name": "image_gen_width",
+          "type": "INT",
+          "link": 205,
+          "widget": {
+            "name": "image_gen_width"
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "image_gen_height",
+          "type": "INT",
+          "link": 206,
+          "widget": {
+            "name": "image_gen_height"
+          },
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "RESOLUTION (INT)",
+          "type": "INT",
+          "links": [
+            198
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PixelPerfectResolution"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "Just Resize"
+      ]
+    },
+    {
+      "id": 157,
+      "type": "ImageResize+",
+      "pos": [
+        5762,
+        495
+      ],
+      "size": {
+        "0": 315,
+        "1": 218
+      },
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 203
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            204
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            205
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            206
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        512,
+        912,
+        "lanczos",
+        true,
+        "always",
+        0
+      ]
+    },
+    {
+      "id": 50,
+      "type": "Zoe-DepthMapPreprocessor",
+      "pos": [
+        7572.532336425779,
+        906.0002441406247
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 52,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 148,
+          "slot_index": 0
+        },
+        {
+          "name": "resolution",
+          "type": "INT",
+          "link": 202,
+          "widget": {
+            "name": "resolution"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            207
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Zoe-DepthMapPreprocessor"
+      },
+      "widgets_values": [
+        512
+      ]
+    },
+    {
+      "id": 116,
+      "type": "Simple String",
+      "pos": [
+        5176.0006103515625,
+        -1189.6670684814453
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            163
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "项目目录",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "dance2"
+      ]
+    },
+    {
+      "id": 83,
+      "type": "Note",
+      "pos": [
+        6233,
+        153
+      ],
+      "size": {
+        "0": 279.0861511230469,
+        "1": 58
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "导出各类预处理图片，如果不需要哪类图片只要bypass这个group就好了"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 156,
+      "type": "Note",
+      "pos": [
+        6215,
+        -48
+      ],
+      "size": {
+        "0": 451.7334289550781,
+        "1": 112.19999694824219
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "title": "特别提醒",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "流程分两次执行\n1 生成抠像图\n2 根据抠像图生成其他图\n\n所以在第一步的时候要把加载抠像图的节点bypass掉\n同样，第二步的时候要把生成抠像图的节点bypass掉"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 162,
+      "type": "ConcatStringSingle",
+      "pos": [
+        7230,
+        -750
+      ],
+      "size": {
+        "0": 256.6666259765625,
+        "1": 57.3333740234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 209,
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 210,
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            208
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 163,
+      "type": "GetNode",
+      "pos": [
+        6870,
+        -800
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 31,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            209
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top+project_folder",
+      "properties": {},
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 160,
+      "type": "Simple String",
+      "pos": [
+        6850,
+        -750
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            210
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "MeshGraphormer目录及后缀",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "/mesh/m"
+      ]
+    },
+    {
+      "id": 166,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        6049.863405072762,
+        1294.8685216807328
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 75,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 218
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 214,
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "dance/dance2/pose/p",
+        "format": "video/16bit-png",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "m_00001.%03d.png",
+            "subfolder": "dance\\dance2\\mesh",
+            "type": "output",
+            "format": "video/16bit-png"
+          }
+        }
+      }
+    },
+    {
+      "id": 165,
+      "type": "GetNode",
+      "pos": [
+        5242.302296963643,
+        1280.4313812691169
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 33,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            216
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_rmbg_img",
+      "properties": {},
+      "widgets_values": [
+        "rmbg_img"
+      ]
+    },
+    {
+      "id": 168,
+      "type": "GetNode",
+      "pos": [
+        5243.302296963643,
+        1459.4313812691169
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 34,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            217
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_resolution",
+      "properties": {},
+      "widgets_values": [
+        "resolution"
+      ]
+    },
+    {
+      "id": 161,
+      "type": "SetNode",
+      "pos": [
+        7480,
+        -750
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 208
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "Set_mesh_prefix",
+      "properties": {
+        "previousName": "mesh_prefix"
+      },
+      "widgets_values": [
+        "mesh_prefix"
+      ]
+    },
+    {
+      "id": 159,
+      "type": "MeshGraphormer-DepthMapPreprocessor",
+      "pos": [
+        5492.302296963643,
+        1290.4313812691169
+      ],
+      "size": {
+        "0": 315,
+        "1": 174
+      },
+      "flags": {},
+      "order": 59,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 216,
+          "slot_index": 0
+        },
+        {
+          "name": "resolution",
+          "type": "INT",
+          "link": 217,
+          "widget": {
+            "name": "resolution"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            218
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "INPAINTING_MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MeshGraphormer-DepthMapPreprocessor"
+      },
+      "widgets_values": [
+        30,
+        512,
+        "based_on_depth",
+        5,
+        88
+      ]
+    },
+    {
+      "id": 167,
+      "type": "GetNode",
+      "pos": [
+        5869,
+        1382
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 35,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            214
+          ]
+        }
+      ],
+      "title": "Get_mesh_prefix",
+      "properties": {},
+      "widgets_values": [
+        "mesh_prefix"
+      ]
+    },
+    {
+      "id": 172,
+      "type": "ConcatStringSingle",
+      "pos": [
+        8130,
+        -1130
+      ],
+      "size": {
+        "0": 256.6666259765625,
+        "1": 57.3333740234375
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "link": 221,
+          "widget": {
+            "name": "string_a"
+          }
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": 222,
+          "widget": {
+            "name": "string_b"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            220
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatStringSingle"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 173,
+      "type": "GetNode",
+      "pos": [
+        7780,
+        -1190
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 36,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            221
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_top+project_folder",
+      "properties": {},
+      "widgets_values": [
+        "top+project_folder"
+      ]
+    },
+    {
+      "id": 170,
+      "type": "Simple String",
+      "pos": [
+        7750,
+        -1130
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            222
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "depth目录及后缀",
+      "properties": {
+        "Node name for S&R": "Simple String"
+      },
+      "widgets_values": [
+        "/canny/m"
+      ]
+    },
+    {
+      "id": 171,
+      "type": "SetNode",
+      "pos": [
+        8400,
+        -1126
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 76,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "link": 220
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "title": "Set_canny_prefix",
+      "properties": {
+        "previousName": "canny_prefix"
+      },
+      "widgets_values": [
+        "canny_prefix"
+      ]
+    },
+    {
+      "id": 178,
+      "type": "GetNode",
+      "pos": [
+        6514.300823307523,
+        1439.1666714215803
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 38,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            229
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_resolution",
+      "properties": {},
+      "widgets_values": [
+        "resolution"
+      ]
+    },
+    {
+      "id": 175,
+      "type": "GetNode",
+      "pos": [
+        6530.853209823883,
+        1301.650620681377
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            228
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_rmbg_img",
+      "properties": {},
+      "widgets_values": [
+        "rmbg_img"
+      ]
+    },
+    {
+      "id": 177,
+      "type": "GetNode",
+      "pos": [
+        7122.853209823882,
+        1364.650620681377
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 40,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            226
+          ]
+        }
+      ],
+      "title": "Get_canny_prefix",
+      "properties": {},
+      "widgets_values": [
+        "canny_prefix"
+      ]
+    },
+    {
+      "id": 176,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        7311.85320982388,
+        1275.650620681377
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 230
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 226,
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "dance/dance2/pose/p",
+        "format": "video/16bit-png",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "m_00001.%03d.png",
+            "subfolder": "dance\\dance2\\canny",
+            "type": "output",
+            "format": "video/16bit-png"
+          }
+        }
+      }
+    },
+    {
+      "id": 158,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": {
+        "0": 6748,
+        "1": -49,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 388.844970703125,
+        "1": 274
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      }
+    },
+    {
+      "id": 179,
+      "type": "CannyEdgePreprocessor",
+      "pos": [
+        6754.853209823883,
+        1322.650620681377
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 228,
+          "slot_index": 0
+        },
+        {
+          "name": "resolution",
+          "type": "INT",
+          "link": 229,
+          "widget": {
+            "name": "resolution"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            230
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CannyEdgePreprocessor"
+      },
+      "widgets_values": [
+        100,
+        200,
+        512
+      ]
+    }
+  ],
+  "links": [
+    [
+      125,
+      1,
+      0,
+      77,
+      1,
+      "IMAGE"
+    ],
+    [
+      129,
+      79,
+      0,
+      77,
+      0,
+      "RMBGMODEL"
+    ],
+    [
+      142,
+      91,
+      0,
+      92,
+      0,
+      "MASK"
+    ],
+    [
+      144,
+      92,
+      0,
+      93,
+      0,
+      "IMAGE"
+    ],
+    [
+      146,
+      95,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      147,
+      5,
+      0,
+      96,
+      0,
+      "IMAGE"
+    ],
+    [
+      148,
+      97,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      153,
+      103,
+      0,
+      84,
+      0,
+      "IMAGE"
+    ],
+    [
+      154,
+      84,
+      0,
+      104,
+      0,
+      "IMAGE"
+    ],
+    [
+      155,
+      105,
+      0,
+      106,
+      0,
+      "*"
+    ],
+    [
+      156,
+      101,
+      0,
+      91,
+      0,
+      "MASK"
+    ],
+    [
+      157,
+      105,
+      1,
+      107,
+      0,
+      "*"
+    ],
+    [
+      161,
+      111,
+      0,
+      98,
+      3,
+      "STRING"
+    ],
+    [
+      163,
+      116,
+      0,
+      118,
+      0,
+      "*"
+    ],
+    [
+      164,
+      110,
+      0,
+      119,
+      0,
+      "*"
+    ],
+    [
+      171,
+      121,
+      0,
+      125,
+      0,
+      "STRING"
+    ],
+    [
+      172,
+      122,
+      0,
+      125,
+      1,
+      "STRING"
+    ],
+    [
+      175,
+      117,
+      0,
+      126,
+      1,
+      "STRING"
+    ],
+    [
+      176,
+      125,
+      0,
+      127,
+      0,
+      "*"
+    ],
+    [
+      177,
+      128,
+      0,
+      126,
+      0,
+      "STRING"
+    ],
+    [
+      178,
+      126,
+      0,
+      123,
+      0,
+      "STRING"
+    ],
+    [
+      179,
+      131,
+      0,
+      130,
+      0,
+      "*"
+    ],
+    [
+      180,
+      132,
+      0,
+      131,
+      0,
+      "STRING"
+    ],
+    [
+      181,
+      129,
+      0,
+      131,
+      1,
+      "STRING"
+    ],
+    [
+      182,
+      135,
+      0,
+      134,
+      0,
+      "*"
+    ],
+    [
+      183,
+      136,
+      0,
+      135,
+      0,
+      "STRING"
+    ],
+    [
+      184,
+      133,
+      0,
+      135,
+      1,
+      "STRING"
+    ],
+    [
+      185,
+      139,
+      0,
+      138,
+      0,
+      "*"
+    ],
+    [
+      186,
+      140,
+      0,
+      139,
+      0,
+      "STRING"
+    ],
+    [
+      187,
+      137,
+      0,
+      139,
+      1,
+      "STRING"
+    ],
+    [
+      188,
+      143,
+      0,
+      142,
+      0,
+      "*"
+    ],
+    [
+      189,
+      144,
+      0,
+      143,
+      0,
+      "STRING"
+    ],
+    [
+      190,
+      141,
+      0,
+      143,
+      1,
+      "STRING"
+    ],
+    [
+      191,
+      145,
+      0,
+      96,
+      3,
+      "STRING"
+    ],
+    [
+      192,
+      146,
+      0,
+      93,
+      3,
+      "STRING"
+    ],
+    [
+      193,
+      147,
+      0,
+      102,
+      3,
+      "STRING"
+    ],
+    [
+      194,
+      148,
+      0,
+      104,
+      3,
+      "STRING"
+    ],
+    [
+      197,
+      151,
+      0,
+      5,
+      1,
+      "INT"
+    ],
+    [
+      198,
+      152,
+      0,
+      153,
+      0,
+      "*"
+    ],
+    [
+      200,
+      77,
+      0,
+      102,
+      0,
+      "IMAGE"
+    ],
+    [
+      201,
+      154,
+      0,
+      84,
+      1,
+      "INT"
+    ],
+    [
+      202,
+      155,
+      0,
+      50,
+      1,
+      "INT"
+    ],
+    [
+      203,
+      105,
+      0,
+      157,
+      0,
+      "IMAGE"
+    ],
+    [
+      204,
+      157,
+      0,
+      152,
+      0,
+      "IMAGE"
+    ],
+    [
+      205,
+      157,
+      1,
+      152,
+      1,
+      "INT"
+    ],
+    [
+      206,
+      157,
+      2,
+      152,
+      2,
+      "INT"
+    ],
+    [
+      207,
+      50,
+      0,
+      98,
+      0,
+      "IMAGE"
+    ],
+    [
+      208,
+      162,
+      0,
+      161,
+      0,
+      "*"
+    ],
+    [
+      209,
+      163,
+      0,
+      162,
+      0,
+      "STRING"
+    ],
+    [
+      210,
+      160,
+      0,
+      162,
+      1,
+      "STRING"
+    ],
+    [
+      214,
+      167,
+      0,
+      166,
+      3,
+      "STRING"
+    ],
+    [
+      216,
+      165,
+      0,
+      159,
+      0,
+      "IMAGE"
+    ],
+    [
+      217,
+      168,
+      0,
+      159,
+      1,
+      "INT"
+    ],
+    [
+      218,
+      159,
+      0,
+      166,
+      0,
+      "IMAGE"
+    ],
+    [
+      220,
+      172,
+      0,
+      171,
+      0,
+      "*"
+    ],
+    [
+      221,
+      173,
+      0,
+      172,
+      0,
+      "STRING"
+    ],
+    [
+      222,
+      170,
+      0,
+      172,
+      1,
+      "STRING"
+    ],
+    [
+      226,
+      177,
+      0,
+      176,
+      3,
+      "STRING"
+    ],
+    [
+      228,
+      175,
+      0,
+      179,
+      0,
+      "IMAGE"
+    ],
+    [
+      229,
+      178,
+      0,
+      179,
+      1,
+      "INT"
+    ],
+    [
+      230,
+      179,
+      0,
+      176,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "pose",
+      "bounding": [
+        6219,
+        808,
+        1087,
+        321
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "depth",
+      "bounding": [
+        7388,
+        810,
+        891,
+        329
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "mask",
+      "bounding": [
+        6673,
+        404,
+        1159,
+        338
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "生成抠像图",
+      "bounding": [
+        5178,
+        -483,
+        938,
+        813
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "scribble",
+      "bounding": [
+        5174,
+        787,
+        966,
+        344
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "加载抠像图",
+      "bounding": [
+        5184,
+        413,
+        1435,
+        332
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "设置目录名称",
+      "bounding": [
+        5084,
+        -1337,
+        3594,
+        840
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": " MeshGraphormer",
+      "bounding": [
+        5178,
+        1201,
+        1228,
+        358
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Canny",
+      "bounding": [
+        6476,
+        1205,
+        1174,
+        315
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
